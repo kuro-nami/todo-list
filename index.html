@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning JS rn</title>
+    <link href="./src/output.css" rel="stylesheet" />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=SUSE:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body
+    class="font-Poppins flex h-screen items-center justify-center bg-gray-900"
+  >
+    <!-- container div  -->
+    <div
+      id="container"
+      class="flex w-[min(90%,500px)] flex-col rounded-sm bg-slate-200 px-8 py-6"
+    >
+      <h1 class="text-3xl font-bold">Todo List</h1>
+      <!-- input field + button div -->
+      <div class="mt-3 flex h-12 w-[95%] justify-center">
+        <input
+          id="input-box"
+          class="w-[80%] rounded-l-full px-4 shadow-sm shadow-slate-800 focus:outline-none"
+          type="text"
+          placeholder="Add a Task 😎"
+        />
+        <button
+          onclick="createTask()"
+          id="add-button"
+          class="w-[20%] rounded-r-full bg-orange-500 text-center shadow-sm shadow-slate-800 hover:bg-orange-400"
+        >
+          Add
+        </button>
+      </div>
+      <!-- Task list div -->
+      <div class="mt-3">
+        <ul>
+          <!-- ul element with svg -->
+          <!-- <li class="my-4 the-ul-li">
+            <div class="flex items-center justify-between">
+              <span class="flex items-center gap-2">
+                <img
+                  draggable="false"
+                  id="circle-mark"
+                  onclick="circleToCheck()"
+                  class="w-6 cursor-pointer hover:opacity-60"
+                  src="./src/assets/circle-mark.svg"
+                  alt="O"
+                />
+                <img
+                  draggable="false"
+                  id="check-mark"
+                  onclick="circleToCheck()"
+                  class="hidden w-6 cursor-pointer hover:opacity-60"
+                  src="./src/assets/check-mark.svg"
+                  alt="C"
+                />
+                <h1 id="task-list-text" class="text-xl">
+                  Create a JavaScript Web App
+                </h1>
+              </span>
+              <img
+                draggable="false"
+                id="x-mark"
+                onclick="deleteTask()"
+                class="w-4 cursor-pointer hover:opacity-60"
+                src="./src/assets/x-mark.svg"
+                alt="C"
+              />
+            </div>
+          </li> -->
+          <!-- ul element with svg end-->
+        </ul>
+      </div>
+    </div>
+    <script src="./src/script.js"></script>
+  </body>
+</html>
